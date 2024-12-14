@@ -11,6 +11,7 @@ export default async function Home({ searchParams }: any) {
     model: searchParams.model || '',
   });
   console.log(allCars);
+  console.log('key', process.env.RAPIDAPI_KEY);
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   return (

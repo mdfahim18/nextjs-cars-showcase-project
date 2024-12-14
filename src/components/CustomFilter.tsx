@@ -10,7 +10,6 @@ import React, { Fragment, useState } from 'react';
 const CustomFilter = ({ title, options }: CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0]);
   const router = useRouter();
-  console.log(options);
 
   const handleUpdateParams = (e: { title: string; value: string }) => {
     const newPathname = updateSearchParams(title, e.value.toLowerCase());
